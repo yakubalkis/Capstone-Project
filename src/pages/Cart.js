@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
 import {AppContext} from '../context/Context'
 import CartItem from "../components/CartItem"
 
@@ -17,7 +17,6 @@ function Cart() {
     function placeOrder(){
         setTextBtn('Ordering...')
         setTimeout(() => {
-            console.log('Order Placed!')
             setTextBtn('Place Order')
             removeAllFromCart()
         },3000)
@@ -31,7 +30,7 @@ function Cart() {
             {cartItemElements}
             <p className="total-cost">Total: {totalCostDisplay} </p>
             <div className="order-button">
-                {cartItems.length > 0 && <button onClick={placeOrder}>{textBtn}</button>}
+                {cartItems.length > 0 ? <button onClick={placeOrder}>{textBtn}</button> : <p>You have no items in your cart.</p>}
             </div>
         </main>
     )
