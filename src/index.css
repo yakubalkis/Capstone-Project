@@ -7,12 +7,21 @@
   --blue: #ACE6EC;
 }
 
-html, body {
+body {
   font-family: 'Oswald', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  position: relative;
+  background-color:cadetblue;
 }
+.container{
+  width: 760px;
+  position: absolute;
 
+  transform: translateX(50%);
+  right: 50%;
+}
 main.photos {
   padding: 10px;
   display: grid;
@@ -45,6 +54,8 @@ div.order-button > button {
   cursor: pointer;
   padding: 15px;
   transition: all .2s ease-in-out;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 div.order-button > button:focus {
@@ -86,11 +97,15 @@ img.image-grid {
   cursor: pointer;
 }
 
+
 .ri-heart-fill {
   opacity: .7;
 }
 
+
 .ri-delete-bin-line, .ri-delete-bin-fill {
+  left: 170px;
+  position: absolute;
   font-size: 1.3em;
   cursor: pointer;
 }
