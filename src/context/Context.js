@@ -20,7 +20,10 @@ function AppContextProvider({children}){
         function removeFromCart(id){
             setCartItems(prevItems => prevItems.filter(item => item.id !== id))
         }
-       
+        
+        function removeAllFromCart(id){
+            setCartItems([])
+        }
      
         function toggleFavorite(id){
             const newState = allPhotos.map(obj =>  {
@@ -35,7 +38,7 @@ function AppContextProvider({children}){
         
 
     return(
-        <AppContext.Provider value={{allPhotos,  toggleFavorite, addToCart, cartItems, removeFromCart}}>  {/*allPhotos: allPhotos */}
+        <AppContext.Provider value={{allPhotos,  toggleFavorite, addToCart, cartItems, removeFromCart, removeAllFromCart}}>  {/*allPhotos: allPhotos */}
             {children}
         </AppContext.Provider>
     )
