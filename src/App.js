@@ -5,11 +5,9 @@ import Photos from "./pages/Photos"
 import {Routes, Route} from 'react-router-dom'
 function App() {    
     return (
-        <div>
+        <div className="container">
             <Header />
             <h1>Home Page</h1>
-           
-
             <Routes>
                 <Route path="/" element={<Photos/>} />
                 <Route path="/cart" element={<Cart />} />
