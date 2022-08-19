@@ -1,5 +1,5 @@
 # Capstone-Project
-This is a solution to the Capstone Project Challenge. It has a structure similar to e-commerce sites.
+This is a solution to the Capstone Project Challenge. It has a simple structure similar to e-commerce sites.
 ## Overview
 ### The Challenge
 #### Used
